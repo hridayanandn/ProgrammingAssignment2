@@ -21,7 +21,7 @@ list(set = set, get = get, setinv = setinv, getinv = getinv)
 ##If the inverse has already been calculated (and the matrix has not changed), then the cachesolve retrieves the inverse from the cache.
 
 cacheSolve <- function(x, ...) { 
-    i<- x$getinv()
+    m<- x$getinv()
     if(!is.null(m)) {
       message("getting cached data")
       return(m)
